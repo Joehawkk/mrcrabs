@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageButton
+            android:id="@+id/restartbutton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:background="@drawable/restart"
+            android:onClick="restart" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/exitButton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:adjustViewBounds="false"
+            android:background="@drawable/exit"
+            android:onClick="exit"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivNewHighest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/new_highest"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:layout_width="282dp"
+            android:layout_height="150dp"
+            android:background="@drawable/signforbutton"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:textAlignment="gravity">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kenney_blocks"
+                    android:gravity="center_horizontal"
+                    android:text="Your Points: "
+                    android:textColor="#D7A53F3F"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kenney_blocks"
+                    android:gravity="center_horizontal"
+                    android:text="50"
+                    android:textColor="#89FF00"
+                    android:textSize="34sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:textAlignment="gravity">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:fontFamily="@font/kenney_blocks"
+                    android:gravity="center_horizontal"
+                    android:text="Highest: "
+                    android:textColor="#D7A53F3F"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvHighest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kenney_blocks"
+                    android:gravity="center_horizontal"
+                    android:text="100"
+                    android:textColor="#89FF04"
+                    android:textSize="34sp" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</LinearLayout>
