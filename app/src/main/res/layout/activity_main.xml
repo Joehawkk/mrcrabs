@@ -31,13 +31,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="107dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
-
-        <Space
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
 
         <ImageButton
             android:id="@+id/settingsButton"
@@ -46,22 +42,49 @@
             android:background="@drawable/settings"
             android:onClick="showSettings" />
 
-
         <Space
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <ImageButton
-            android:id="@+id/playButton"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:background="@drawable/play"
-            android:onClick="startGame" />
+        <!-- Two play-mode buttons stacked in the centre -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/classicButton"
+                android:layout_width="150dp"
+                android:layout_height="52dp"
+                android:background="@drawable/signforbutton"
+                android:fontFamily="@font/kenney_blocks"
+                android:text="CLASSIC"
+                android:textColor="#D7A53F3F"
+                android:textSize="15sp"
+                android:onClick="startClassic" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp" />
+
+            <Button
+                android:id="@+id/timeButton"
+                android:layout_width="150dp"
+                android:layout_height="52dp"
+                android:background="@drawable/signforbutton"
+                android:fontFamily="@font/kenney_blocks"
+                android:text="TIME TRIAL"
+                android:textColor="#D7A53F3F"
+                android:textSize="15sp"
+                android:onClick="startTimeTrial" />
+
+        </LinearLayout>
 
         <Space
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_weight="1" />
 
         <ImageButton
@@ -70,13 +93,7 @@
             android:layout_height="75dp"
             android:adjustViewBounds="false"
             android:background="@drawable/exit"
-            android:onClick="exit"
-            android:visibility="visible" />
-
-        <Space
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:onClick="exit" />
 
     </LinearLayout>
 

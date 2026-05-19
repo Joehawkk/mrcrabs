@@ -1,7 +1,6 @@
 package kzn.mrcrabs.project;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -54,12 +53,16 @@ public class Settings extends AppCompatActivity {
 
 
     public void play() {
-        mediaPlayer.start();
+        if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
+            mediaPlayer.start();
+        }
         button.setText("OFF");
     }
 
     public void pause() {
-        mediaPlayer.pause();
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.pause();
+        }
         button.setText("ON");
     }
 

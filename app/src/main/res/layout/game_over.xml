@@ -39,6 +39,16 @@
         android:gravity="center|center_horizontal|center_vertical"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/tvMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/kenney_blocks"
+            android:text="CLASSIC"
+            android:textColor="#D7A53F3F"
+            android:textSize="20sp" />
+
         <ImageView
             android:id="@+id/ivNewHighest"
             android:layout_width="wrap_content"
@@ -47,6 +57,7 @@
             android:visibility="gone" />
 
         <TableLayout
+            android:id="@+id/scoreTable"
             android:layout_width="282dp"
             android:layout_height="150dp"
             android:background="@drawable/signforbutton"

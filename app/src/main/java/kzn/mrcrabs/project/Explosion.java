@@ -8,7 +8,7 @@ public class Explosion {
 
     private static Bitmap[] frames;
     int explosionFrame = 0;
-    int explosionX, explosionY;
+    float explosionX, explosionY;
 
     public Explosion(Context context) {
         if (frames == null) {
